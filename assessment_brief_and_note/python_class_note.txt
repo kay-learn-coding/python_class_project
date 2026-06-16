@@ -1,0 +1,233 @@
+python_class_note
+
+m-Mahdavi
+teaching
+function 
+classes
+
+#list
+list=[]
+class=[math,english,science]
+student=[sarah,micheal,kay]
+print(class)=will print the class list
+print(class[0])=will print (math), since its in the first position
+.insert= allow you to add mutiple list together
+.extend=allow you to add one list to the end of another
+.pop=allow you to remove the last item from your list (science)
+.reverse =allow you to reverse your list
+.sort=will sort the list either in alphabeticlly or accending order
+.sort(reverse=true)=will sort it backwards
+sorted()=will allow you to sort the list without altering the orginal list
+min()=give the min value
+max()=give the max
+sum()=sum the whole list
+.join=to edit how the list is stuctured together
+.index=allow you to search your list position
+print(math in class)=all you to find if an item is in the list
+for index.sub in enumerate(class)=returns the list and index
+len()=gives the lenght of datatype
+
+#Tuple
+tuple=()
+tuple_list=(math,english,science)=same as list but cannot be modify
+
+
+#Set
+set={}
+set_list={math,english,science}=mainly used to check if something is part of a set or to get rid of dupicate
+set=unordered
+set=immutable data
+.union=matching data will be printed
+.intersection=to find what item is repeated in mutiple set
+.diffence=to find what items dont show up in both set
+.add=can only add one value
+.update=allow you to add mutiple value
+
+#dictionary
+dictionary={}
+dictionary=need a key and value
+dictionary=index
+dictionary=mutable
+student={"name":"john","age":25,"course":["math","data"]}
+print(student["name"])=john
+.get=to get the info from the dictionary
+student.update({"name":"jane"})=allow you to update your dictionary
+del student["age"]=will remove the item from your dictionary
+.keys=to find out the keys for a dictionary
+
+for key,value in student.item():
+print(key,value) will loop all the keys and value in the dictionary
+
+#boolean
+boolean is used for if/elif/else statement also known as 1/0
+
+#and
+and=both statement true
+
+#or
+or=one statementis true
+
+xor
+xor=reverse the answer
+
+#funtions
+its a group of operator that you call on to perform a task
+function are one way to break application down into manageable unit
+
+-def=a way to define a function
+def function_name{
+
+[start program]
+
+}
+
+-call function= function_name
+
+#module = is away to import pre made function allow you to use them.
+key_word=import (module name)
+
+snake_case
+pascel_case
+camel_case
+
+import math
+def num(radius):
+  return radius** 2* math.pi
+for r in range(11):
+  a=num(r)
+  print(f"r:{r}, area:{a}")
+
+#factorial function
+def factorial(n):
+  result=1
+  for k in range(1,n+1):
+    result *=k
+    print(k,result)
+  return result
+factorial(5)
+
+#parameter function
+parameters are always separated by (,)
+
+#named argument
+if a function has several argument, you can name the parameters value
+
+#arbitrary arguments 
+def greeter(first_name,last_name="baba"):
+  print(f"hi" ,first_name,last_name)
+greeter("momo","baba")
+
+#recursion
+def fac_re(n):
+  if n==1:
+    return 1
+  else:
+    return n*fac_re(n-1)
+fac_re(5)
+
+#globel
+this allow you to use a ver globally in your code
+
+#expression
+
+#q1_ex_1
+
+def num_div(f_num,s_num):
+  if f_num%s_num==0:
+    print(f"{f_num} is div by {s_num}.")
+  else:
+    print(f"{f_num} is not div by {s_num}")
+  return
+num_div(2,5)
+
+#q1_ex_2
+
+f_num=int(input(f"first num? "))
+s_num=int(input(f"second num? "))
+
+if f_num%s_num==0:
+    print(f"{f_num} is div by {s_num}.")
+else:
+    print(f"{f_num} is not div by {s_num}")
+
+#q2_ex_1
+
+web_check=str(input("website? "))
+if web_check[-3:]=="com":
+  print("yes")
+else:
+  print("no")
+
+#q3_ex_1
+
+first_list=[1, "hello", 4.3, True, "bye"]
+second_list=[]
+
+for words in first_list:
+  if isinstance(words,str):
+    second_list.append(words)
+
+print(second_list)
+
+#q3_ex_1
+
+player_num=int(input(f"what is your num? "))
+check_num=10
+if player_num==check_num:
+  print(f"yes your num {player_num} match")
+elif player_num>check_num:
+  print(f"your num {player_num} is greater")
+else:
+  print(f"your num {player_num} is too small")
+
+#q4_ex_1
+
+even_num=[3,2,5,6,7,8,9,10]
+n_num=[]
+for num in even_num:
+  if num%2==0:
+    n_num.append(num)
+
+total_sum=0
+for total in n_num:
+  total_sum+=total
+
+print(n_num)
+print(total_sum)
+
+OOP Programming
+
+#classes
+a template used to frame a type of object or item, this basic template will be reused everytime it is needed, allow the user to skip repeating the same code when creating object of the same type.
+
+#UML
+A universally language
+
+#class_exp
+
+class Student:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+s1 = Student("john",20)
+s2 = Student("doe",22)
+
+print(s1,s2)
+
+#dict
+__name__
+__module__
+__bases__
+__dict__
+__doc__
+
+for object
+__class__
+__dict__
+
+#privacy
+
+using (_) at the beginning, makes the ver semi_private
+using (__) at the beginning, makes it private
+

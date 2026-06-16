@@ -1,0 +1,38 @@
+{
+    "seabass": {
+        "type": "food",
+        "name": "seabass",
+        "cost": 20.0,
+        "quantity": 16
+    },
+    "ribeye": {
+        "type": "food",
+        "name": "ribye",
+        "cost": 25.0,
+        "quantity": 26
+    },
+    "chicken": {
+        "type": "food",
+        "name": "chicken",
+        "cost": 20.0,
+        "quantity": 47
+    },
+    "water": {
+        "type": "drink",
+        "name": "water",
+        "cost": 2.0,
+        "quantity": 50
+    },
+    "coke": {
+        "type": "drink",
+        "name": "coke",
+        "cost": 3.0,
+        "quantity": 50
+    },
+    "orange": {
+        "type": "drink",
+        "name": "orange",
+        "cost": 4.0,
+        "quantity": 50
+    }
+}
