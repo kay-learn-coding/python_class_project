@@ -21,17 +21,17 @@ my_resturant_project/
 
 ## Core Features
 
-1. Graphical User Interface: Built using Python's tkinter package with reactive entry widgets mapped to active database elements.
+- Graphical User Interface: Built using Python's tkinter package with reactive entry widgets mapped to active database elements.
 
-2. Object-Oriented Design: Uses inheritance and encapsulation (MenuItem ➔ Food / Drink) to structure menu items cleanly.
+- Object-Oriented Design: Uses inheritance and encapsulation (MenuItem ➔ Food / Drink) to structure menu items cleanly.
 
-3. Input Validation: Safe try/except exception structures handle invalid non-numeric inputs (preventing ValueError crashes).
+- Input Validation: Safe try/except exception structures handle invalid non-numeric inputs (preventing ValueError crashes).
 
-4. Automated Stock Validation: Intercepts out-of-stock orders before checking out and notifies the user with screen alerts.
+- Automated Stock Validation: Intercepts out-of-stock orders before checking out and notifies the user with screen alerts.
 
-5. Data Persistence: Automatically reads and writes state variations into menu_data.json using stable absolute paths to avoid terminal directory errors.
+- Data Persistence: Automatically reads and writes state variations into menu_data.json using stable absolute paths to avoid terminal directory errors.
 
-6. Monospaced Receipt Generation: Dynamically generates a canvas receipt layout utilizing Courier typography for column-aligned financial printouts.
+- Monospaced Receipt Generation: Dynamically generates a canvas receipt layout utilizing Courier typography for column-aligned financial printouts.
 
 
 ## Installation and Setup
@@ -39,36 +39,36 @@ Prerequisites
 - Python 3.x installed on your local machine.
 
 ## Execution Instructions
-1. Clone the repository or navigate to your project directory:
+- Clone the repository or navigate to your project directory:
 ```
 cd path/to/my_resturant_project
 ```
-2. Run the main application file:
+- Run the main application file:
 ```
 python Main.py
 ```
 ## Code Overview
 
-1. Object Models (menu_item.py)
+- Object Models (menu_item.py)
 Defines the structure of item elements. food and drink subclasses inherit core parameters (name, cost, quantity) from the parent menu_item class while tracking independent object generation counters.
 
-2. File Automation (data.py)
+- File Automation (data.py)
 Provides atomic synchronization capabilities. Calculates absolute operational paths using the os path utilities to securely pull records from or back up to menu_data.json, parsing dictionaries back into fully instantiated active objects dynamically.
 
-3. Transaction Cart (resturant_order.py)
+- Transaction Cart (resturant_order.py)
 Maintains the individual customer checkout loop state. Controls stock subtraction limits and appends successful lines to total_item_list while incrementing the financial total_bill summary tracker.
 
-4. Application Desk (Main.py)
+- Application Desk (Main.py)
 Clears and updates active frames inside the Tkinter application loop. Forwards frame reference instances safely via lambda callbacks to swap ordering windows with receipt canvases seamlessly.
 
 
 ## Testing Scenarios Implemented
 
-1. Successful Purchase: Quantities entered are deducted from the database, total bills are calculated, and tabular summary cards are drawn.
+- Successful Purchase: Quantities entered are deducted from the database, total bills are calculated, and tabular summary cards are drawn.
 
-2. Data Guarding: Typing text patterns (e.g., "abc") instead of whole numbers halts checkout loops via messagebox alerts.
+- Data Guarding: Typing text patterns (e.g., "abc") instead of whole numbers halts checkout loops via messagebox alerts.
 
-3. Inventory Bounds Protection: Requesting orders higher than available inventory numbers flags a warning and prevents transactions from modifying file states.
+- Inventory Bounds Protection: Requesting orders higher than available inventory numbers flags a warning and prevents transactions from modifying file states.
 
 
 ## Author and Academic Context
