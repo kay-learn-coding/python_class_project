@@ -8,7 +8,7 @@ A modular, Object-Oriented Programming (OOP) Point-of-Sale (POS) restaurant orde
 
 The project follows a modular architecture separating the user interface, business logic, object structures, and data handling components:
 
-```text
+```
 my_resturant_project/
 │
 ├── Main.py               # Application entry point (Tkinter GUI, Screens, & Event Loops)
@@ -17,35 +17,38 @@ my_resturant_project/
 ├── resturant_order.py    # Transaction Manager (Cart logic, balance calculation, stock checks)
 ├── menu_data.json        # JSON database storing current item configurations and stock
 └── README.md             # Project documentation (this file)
-
+```
 
 ## Core Features
-Graphical User Interface: Built using Python's tkinter package with reactive entry widgets mapped to active database elements.
 
-Object-Oriented Design: Uses inheritance and encapsulation (MenuItem ➔ Food / Drink) to structure menu items cleanly.
+1. Graphical User Interface: Built using Python's tkinter package with reactive entry widgets mapped to active database elements.
 
-Input Validation: Safe try/except exception structures handle invalid non-numeric inputs (preventing ValueError crashes).
+2. Object-Oriented Design: Uses inheritance and encapsulation (MenuItem ➔ Food / Drink) to structure menu items cleanly.
 
-Automated Stock Validation: Intercepts out-of-stock orders before checking out and notifies the user with screen alerts.
+3. Input Validation: Safe try/except exception structures handle invalid non-numeric inputs (preventing ValueError crashes).
 
-Data Persistence: Automatically reads and writes state variations into menu_data.json using stable absolute paths to avoid terminal directory errors.
+4. Automated Stock Validation: Intercepts out-of-stock orders before checking out and notifies the user with screen alerts.
 
-Monospaced Receipt Generation: Dynamically generates a canvas receipt layout utilizing Courier typography for column-aligned financial printouts.
+5. Data Persistence: Automatically reads and writes state variations into menu_data.json using stable absolute paths to avoid terminal directory errors.
+
+6. Monospaced Receipt Generation: Dynamically generates a canvas receipt layout utilizing Courier typography for column-aligned financial printouts.
+
 
 ## Installation and Setup
 Prerequisites
-Python 3.x installed on your local machine.
-
+- Python 3.x installed on your local machine.
 
 ## Execution Instructions
 1. Clone the repository or navigate to your project directory:
+```
 cd path/to/my_resturant_project
-
+```
 2. Run the main application file:
+```
 python Main.py
+```
+## Code Overview
 
-
-## Code Architecture Overview
 1. Object Models (menu_item.py)
 Defines the structure of item elements. food and drink subclasses inherit core parameters (name, cost, quantity) from the parent menu_item class while tracking independent object generation counters.
 
@@ -60,18 +63,20 @@ Clears and updates active frames inside the Tkinter application loop. Forwards f
 
 
 ## Testing Scenarios Implemented
-Successful Purchase: Quantities entered are deducted from the database, total bills are calculated, and tabular summary cards are drawn.
 
-Data Guarding: Typing text patterns (e.g., "abc") instead of whole numbers halts checkout loops via messagebox alerts.
+1. Successful Purchase: Quantities entered are deducted from the database, total bills are calculated, and tabular summary cards are drawn.
 
-Inventory Bounds Protection: Requesting orders higher than available inventory numbers flags a warning and prevents transactions from modifying file states.
+2. Data Guarding: Typing text patterns (e.g., "abc") instead of whole numbers halts checkout loops via messagebox alerts.
+
+3. Inventory Bounds Protection: Requesting orders higher than available inventory numbers flags a warning and prevents transactions from modifying file states.
 
 
 ## Author and Academic Context
-Student Name: Kazeem Olalekan Sola-Raji
 
-Student ID: GH1053278
+- Student Name: Kazeem Olalekan Sola-Raji
 
-Module: B100A Python Programming
+- Student ID: GH1053278
 
-Institution: Gisma University of Applied Sciences
+- Module: B100A Python Programming
+
+- Institution: Gisma University of Applied Sciences
